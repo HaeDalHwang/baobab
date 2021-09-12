@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<title> TEST Page </title>
+	</head>
+	<body>
+	<!-- form  --!>
+	 <h4>Login Test</h4>
+	  <form name="form1" method="post" action="test.php">
+	  <input type="text" name="name1">
+	  <br><br>
+	  <input type="submit" value="OK!~">
+	  </form>
+	<h4>Insert Test</h4>
+	  <form name="form2" method="post" action="test.php">
+	  <input type="text" name="dbid">
+	  <input type="text" name="dbname">
+	  <input type="submit" value="insert! or fileupload">
+	  </form>
+
+	  <h4>FTP Upload</h4>
+	  <form enctype="multipart/form-data" action="test.php" method="post">
+	  <input type="hidden"name="MAX_FILE_SIZE"value="300000"/>This File Upload: <input type="file" name="userfile" id="file"/>
+	  <input type="submit" value="UPLOAD!!~"/>
+	  </form>
+	  <h4>ftp Download</h4>
+	  <form method="post" action="download.php">
+	  <input type="text" name="filename">
+	  <input type="submit" value="download">
+	  </form>
+
+	<br><hr>
+	<a href="./index.php">info php</a><br>
+	<a href="./list.php">ftp list</a>
+	<hr>
+	</body>
+</html>
