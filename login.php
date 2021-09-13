@@ -18,8 +18,8 @@ if($db){
 	$result = mysqli_query($db,$sql);
 	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 	$hash = $row['pwd'];
-	//if(mysqli_num_rows($result)==1){
-	if(password_verify($dbpwd,$hash)){
+	
+	if($hash == password_hash($dbpwd, PASSWORD_DEFAULT)){
 		//로그인 성공
 		echo '<script>';
 		echo 'console.log("Login Success");';
