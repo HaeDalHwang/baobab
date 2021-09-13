@@ -5,7 +5,7 @@ $ftp_server = "211.183.3.100";
 $ftpuser = "bsd";
 $ftppasswd = "bsd";       	
 
-$filename = $_POST['filename'];
+$filename = $_GET['type'];
 
 // Establish ftp connection
 $ftp_connection = ftp_connect($ftp_server, 21)

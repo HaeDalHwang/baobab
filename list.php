@@ -2,9 +2,17 @@
 <html>
 <head>
 	<title>File List</title>
+	
+	<!-- MY funtion -->
+	<script>
+	function filedownload(filename){
+		window.location.href = 'download.php?type='+filename;
+	}
+	</script>
 
    <!--bootstrap 영역-->
-	<script src="my/jquery.js"></script>
+	<script src="my/jquery.js">
+	</script>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 
@@ -65,7 +73,7 @@
 				<tbody style="color:white;">
 			<?php
 			foreach($file_list as $key=>$dat){
-				echo "<tr><td>".$key."</td><td><a id=myLink href=# onclick=filedownload();>".$dat."</a></td></tr>";
+				echo "<tr><td>".$key."</td><td><a id=myLink href=# onclick=filedownload("$dat");>".$dat."</a></td></tr>";
 				}
 			?>
 				</tbody>
