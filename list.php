@@ -67,19 +67,14 @@
 			<!-- list stop -->
 
 			<!-- Form Start -->
-				<form>
-					<div class="form-group mb-3">
-						<input type="file" class="float-left
-						" id="formFileMultiple">
-					</div>
-								
-					<div class="form-group">
-						<input type="submit" value="Upload" class="btn float-left login_btn">
-					</div>
-
+			<div class="form-group">
+				<form enctype="multipart/form-data" action="upload.php" method="post">
+					<input type="hidden"name="MAX_FILE_SIZE"value="300000"/>
+						<input class="float-left" type="file" name="userfile" id="file">						
 					
-						
+						<input type="submit" value="Upload" class="btn float-left login_btn">
 				</form>
+			</div>
 			<!-- form END -->
 			</div>
 			<div class="card-footer">
