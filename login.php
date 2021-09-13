@@ -19,15 +19,17 @@ if($db){
 	$result = mysqli_query($db,$sql);
 	if(mysqli_num_rows($result)==1){
 		//로그인 성공
+		echo "<script>alert(\"Login Success!\");</script>";
         echo("<script>location.replace('list.html');</script>"); 
 	}else{
 		// 로그인 정보틀림
+		echo "<script>alert(\"Login Error!\");</script>";
 		echo("<script>location.replace('index.html');</script>"); 	
 	}
 }
 else{
     // 실패부분
-    alert('Database Error');
+    echo "<script>alert(\"DB connection Error!\");</script>";
 	 echo("<script>location.replace('index.html');</script>");
 }
 
