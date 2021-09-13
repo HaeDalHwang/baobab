@@ -66,10 +66,10 @@
 					<th><h4>Files</h4></th>
 				</tr>
 				</thead>
-				<tbody >
+				<tbody  style="color:white;">
 			<?php
 			foreach($file_list as $key=>$dat){
-				echo "<tr><td><h4>".$key."</h4></td><td><h4>".$dat."</h4></td></tr>";
+				echo "<tr><td>".$key."</td><td>".$dat."</td></tr>";
 				}
 			?>
 				</tbody>
