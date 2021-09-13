@@ -14,12 +14,12 @@ if($db){
 	// 로그인 SQL
 	$dbid = $_POST['id'];
 	$dbpwd = $_POST['pwd'];
-	$sql = "select pwd from member where id='$dbid'";
+	$sql = "select * from member where id='$dbid'";
 	$result = mysqli_query($db,$sql);
-	$hash = mysqli_fetch_assoc($result);
+	$row = mysqli_fetch_assoc($result);
 
 	//if(mysqli_num_rows($result)==1){
-	if(password_verify($dbpwd, $hash["pwd"])){
+	if(password_verify($dbpwd,$row['pwd'])){
 		//로그인 성공
 		echo '<script>';
 		echo 'console.log("Login Success");';
