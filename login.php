@@ -26,7 +26,7 @@ if($db){
 		//로그인 성공
 		echo '<script>';
 		echo 'console.log("Login Success");';
-		echo "location.replace('list.html');";
+		echo "location.replace('list.php');";
      	echo '</script>';
 	}else{
 		// 로그인 정보틀림
