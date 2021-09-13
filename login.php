@@ -1,4 +1,5 @@
 <?php
+echo "<script>alert(\"TEST!\");</script>";
 
 // Mariadb Connect TEST
 $host = "211.183.3.100";
@@ -13,8 +14,8 @@ if($db){
 // 성공부분
 	// 로그인 SQL
 	$dbid = $_POST['id'];
-	$dbpwd = $_POST['pwd']
-	$sql = "select * from member where id='$dbid' and name='dbpwd'";
+	$dbpwd = $_POST['pwd'];
+	$sql = "select * from member where id='$dbid' and name='$dbpwd'";
 
 	$result = mysqli_query($db,$sql);
 	if(mysqli_num_rows($result)==1){
