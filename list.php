@@ -36,10 +36,6 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>File List</h3>
-			</div>
-			<!-- view ID-->
-			<div>
-			<?php echo ""?>	
 			</div>		
 			<div class="card-body">
 
@@ -60,16 +56,16 @@
 			?>
 			
 			<table class="table card-header">
-				<thead>
+				<thead style="color:white;">
 				<tr>
 					<th><h4>No.</h4></th>
 					<th><h4>Files</h4></th>
 				</tr>
 				</thead>
-				<tbody  style="color:white;">
+				<tbody style="color:white;">
 			<?php
 			foreach($file_list as $key=>$dat){
-				echo "<tr><td>".$key."</td><td>".$dat."</td></tr>";
+				echo "<tr><td>".$key."</td><td><a id=myLink href=# onclick=filedownload();>".$dat."</a></td></tr>";
 				}
 			?>
 				</tbody>
