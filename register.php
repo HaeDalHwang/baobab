@@ -14,20 +14,20 @@ if($db){
     if(mysqli_query($db,$sql)){
         echo '<script>';
         echo 'alert("Success register");';
-        echo "location.replace('index.php');";
-        echo '</script>';}
+        echo "location.replace('index.html');";
+        echo '</script>';
     }else{
         echo '<script>';
         echo 'alert("Fail.. register");';
-        echo "location.replace('index.php');";
-        echo '</script>';}
+        echo "location.replace('index.html');";
+        echo '</script>';
     }
 }
 else{
     echo '<script>';
     echo 'alert("DB connection Error");';
-    echo "location.replace('index.php');";
-    echo '</script>';}
+    echo "location.replace('index.html');";
+    echo '</script>';
 }
 
 
