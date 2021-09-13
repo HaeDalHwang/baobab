@@ -22,8 +22,7 @@ if($db){
         echo "location.replace('index.html');";
         echo '</script>';
     }
-}
-else{
+}else{
     echo '<script>';
     echo 'alert("DB connection Error");';
     echo "location.replace('index.html');";

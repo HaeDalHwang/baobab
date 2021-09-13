@@ -15,7 +15,7 @@ if($db){
 	$dbid = $_POST['id'];
 	$dbpwd = $_POST['pwd'];
 	$sql = "select * from member where id='$dbid' 
-	and name='$dbpwd'";
+	and pwd='$dbpwd'";
 	
 	echo '<script>';
 	echo 'console.log("Page TEST");';
