@@ -59,17 +59,17 @@
 			$file_list = ftp_nlist($ftp_connection,"./files");
 			?>
 			
-			<table class="table">
+			<table class="table card-header">
 				<thead>
-				<tr class="table_item">
-					<th>No.</th>
-					<th>Files</th>
+				<tr>
+					<th><h4>No.</h4></th>
+					<th><h4>Files</h4></th>
 				</tr>
 				</thead>
 				<tbody >
 			<?php
 			foreach($file_list as $key=>$dat){
-				echo "<tr class="table_item"><td>".$key."</td><td>".$dat."</td></tr>";
+				echo "<tr><td><h4>".$key."</h4></td><td><h4>".$dat."</h4></td></tr>";
 				}
 			?>
 				</tbody>

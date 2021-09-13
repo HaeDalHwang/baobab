@@ -28,11 +28,6 @@ margin-bottom: auto;
 width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }
-.table_item{
-	font-size: 50px;
-	color: white;
-}
-
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
@@ -43,7 +38,9 @@ color: #FFC312;
 color: white;
 cursor: pointer;
 }
-
+.card-header h4{
+color: white;	
+}
 .card-header h3{
 color: white;
 }
