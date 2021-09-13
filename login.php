@@ -16,10 +16,10 @@ if($db){
 	$dbpwd = $_POST['pwd'];
 	$sql = "select * from member where id='$dbid'";
 	$result = mysqli_query($db,$sql);
-	$row = mysqli_fetch_assoc($result);
-
+	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+	$hash = $row['pwd'];
 	//if(mysqli_num_rows($result)==1){
-	if(password_verify($dbpwd,$row['pwd'])){
+	if(password_verify($dbpwd,$hash)){
 		//로그인 성공
 		echo '<script>';
 		echo 'console.log("Login Success");';
