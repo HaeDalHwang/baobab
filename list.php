@@ -71,11 +71,11 @@
 				</tr>
 				</thead>
 				<tbody style="color:white;">
+
 			<?php
-			foreach($file_list as $key=>$dat){ 
-				echo "<tr><td>".$key."</td><td><a id=myLink href=# onclick=filedownload(".$dat.");>".$dat."</a></td></tr>";
-				}
-			?>			
+			foreach($file_list as $key=>$dat){ ?>
+				<tr><td>".$key."</td><td><a id=myLink href=# onclick=filedownload(<?php $dat?>);><?php echo "$dat" ?></a></td></tr>
+				<?php } ?>			
 				</tbody>
 			</table>	
 
