@@ -10,7 +10,7 @@ $db = new mysqli($host, $id, $passwd, $dbname);
 if($db){
     $insert_id = $_POST['name'];
     $insert_pwd = $_POST['password_1'];
-    $hash = password_hash($insert_pwd, PASSWORD_DEFAULT)
+    $hash = password_hash($insert_pwd, PASSWORD_DEFAULT);
     $sql = "insert into member values ('$insert_id','$hash')";
     if(mysqli_query($db,$sql)){
         echo '<script>';
