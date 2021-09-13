@@ -1,6 +1,6 @@
 <?php
 echo '<script>';
-echo 'console.log("Page TEST")';
+echo 'console.log("Page TEST");';
 echo '</script>';
 
 // Mariadb Connect TEST
@@ -24,21 +24,20 @@ if($db){
 		//로그인 성공
 		echo '<script>';
 		echo 'console.log("Login Success");';
-		echo 'location.replace('list.html');';
-        echo '</script>';
+     		echo '</script>';
+		header('Location: list.html');
+		exit;
 	}else{
 		// 로그인 정보틀림
 		echo '<script>';
-		echo 'console.log("Login Error")';
-		echo 'location.replace('index.html');';
+		echo 'console.log("Login Error");';
 		echo '</script>';	
 	}
 }
 else{
     // 실패부분
     echo '<script>';
-    echo 'console.log("DB Connection Error")';
-    echo 'location.replace('index.html');';
+    echo 'console.log("DB Connection Error");';
     echo '</script>';
 }
 
