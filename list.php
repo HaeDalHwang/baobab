@@ -61,19 +61,17 @@
 			
 			<table class="table">
 				<thead>
-				<tr>
+				<tr class="table_item">
 					<th>No.</th>
 					<th>Files</th>
 				</tr>
 				</thead>
-				<tbody>
-					<tr>
+				<tbody >
 			<?php
 			foreach($file_list as $key=>$dat){
-				echo "<td>".$key."</td><td>".$dat."</td>";
+				echo "<tr class="table_item"><td>".$key."</td><td>".$dat."</td></tr>";
 				}
 			?>
-					</tr>
 				</tbody>
 			</table>	
 
