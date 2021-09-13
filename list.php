@@ -57,11 +57,27 @@
 			$login_result = ftp_login($ftp_connection,$ftpuser,$ftppasswd);
 
 			$file_list = ftp_nlist($ftp_connection,"./files");
+			?>
 			
+			<table class="table">
+				<thead>
+				<tr>
+					<th>No.</th>
+					<th>Files</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+			<?php
 			foreach($file_list as $key=>$dat){
-				echo $key." ".$dat."<br>";
-			}
+				echo "<td>".$key."</td><td>".$dat."</td>";
+				}
+			?>
+					</tr>
+				</tbody>
+			</table>	
 
+			<?php
 			ftp_close($ftp_connection);
 			?>
 			<!-- list stop -->
