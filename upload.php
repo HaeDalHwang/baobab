@@ -15,7 +15,7 @@ $login_result = ftp_login($ftp_connection,$ftpuser,$ftppasswd);
 $filename = $_FILES['userfile']['name'];
 $localfile = $_FILES['userfile']['tmp_name'];
 
-$uploaddir = './files/';
+$uploaddir = '.';
 $serverfile = $uploaddir . $filename;
 if(ftp_put($ftp_connection,$serverfile,$localfile,FTP_BINARY)){
 	echo '<script>';
