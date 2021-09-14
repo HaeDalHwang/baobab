@@ -60,7 +60,7 @@
 			// FTP login 
 			$login_result = ftp_login($ftp_connection,$ftpuser,$ftppasswd);
 
-			$file_list = ftp_nlist($ftp_connection,"./files");
+			$file_list = ftp_nlist($ftp_connection,".");
 			?>
 			
 			<table class="table card-header">
