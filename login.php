@@ -18,9 +18,6 @@ if($db){
 	$result = mysqli_query($db,$sql);
 	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 	$hash = $row['pwd'];
-	echo "$dbpwd.<br>";
-	echo "$hash.<br>";
-	echo "$row.<br>";
 
 	if(password_verify("$dbpwd","$hash")){
 		//로그인 성공
@@ -33,7 +30,7 @@ if($db){
 		echo '<script>';
 		echo 'console.log("Login Error");';
 		echo 'alert("Login Error! 비밀번호나 아이디를 확인하세요!");';
-		//echo "location.replace('index.html');";
+		echo "location.replace('index.html');";
 		echo '</script>';	
 	}
 }

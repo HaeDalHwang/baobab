@@ -16,7 +16,7 @@ if($db){
     $sql = "insert into member values ('$insert_id','$hash','$insert_email')";
     if(mysqli_query($db,$sql)){
         echo '<script>';
-        echo 'alert("Success register'.$insert_pwd. '  '.$insert_pwd2.'");';
+        echo 'alert("Success register");';
 
         echo "location.replace('index.html');";
         echo '</script>';
