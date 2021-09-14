@@ -1,10 +1,15 @@
 <?php
 ob_start();
+header("Content-type: text/html; charset=utf-8");
 // Connect to FTP server
 $ftp_server = "211.183.3.100";
 $ftpuser = "bsd";
 $ftppasswd = "bsd";       	
 
+if(!$_GET['type']){
+    echo "<script>alert('이상하게 접근하셨습니다;;');";
+    echo "history.back();</script>";
+}
 $filename = $_GET['type'];
 
 // Establish ftp connection
@@ -13,8 +18,10 @@ $ftp_connection = ftp_connect($ftp_server, 21)
 // FTP login 
 $login_result = ftp_login($ftp_connection,$ftpuser,$ftppasswd);
 
-$server_file = './files/'.$filename;
+
+$server_file = $filename;
 $local_file = '/tmp/'.$filename;
+
 echo "$server_file<br>$local_file<br>";
 if(ftp_get($ftp_connection,$local_file,$server_file,FTP_BINARY)){
 	echo "<br>Successfully written to $local_file <br>";
@@ -31,7 +38,6 @@ if( $login_result ) {
 //fopen~~ web browser download
  
 if (is_file($local_file)) {
- 
     if (preg_match("MSIE", $_SERVER['HTTP_USER_AGENT'])) { 
         header("Content-type: application/octet-stream"); 
         header("Content-Length: ".filesize("$local_file"));

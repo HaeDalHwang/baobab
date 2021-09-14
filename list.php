@@ -77,7 +77,7 @@
 				echo "<tr>";
 				echo "<td>".$key."</td>";
 				echo "<td>";
-				echo "<a href='./download.php?type=".$dat"'>".$dat."</a>";
+				echo "<a href='./download.php?type=".$dat."'>".$dat."</a>";
 				echo "</td>";
 				echo "</tr>";
 			} 
