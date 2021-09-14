@@ -73,9 +73,15 @@
 				<tbody style="color:white;">
 
 			<?php
-			foreach($file_list as $key=>$dat){ ?>
-				<tr><td>".$key."</td><td><a id=myLink href=# onclick=filedownload(<?php $dat?>);><?php echo "$dat" ?></a></td></tr>
-				<?php } ?>			
+			foreach($file_list as $key=>$dat){ 
+				echo "<tr>";
+				echo "<td>".$key."</td>";
+				echo "<td>";
+				echo "<a href='./download.php?type=".$dat"'>".$dat."</a>";
+				echo "</td>";
+				echo "</tr>";
+			} 
+			?>			
 				</tbody>
 			</table>	
 
