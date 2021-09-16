@@ -9,7 +9,7 @@ $ftp_connection = ftp_connect($ftp_server, 21)
     or die("Could not connect to $ftp_server");
 // FTP login 
 $login_result = ftp_login($ftp_connection,$ftpuser,$ftppasswd);
-
+ftp_pasv($ftp_connection, true) or die("Cannot switch to passive mode");
 
 // FTP Upload 
 $filename = $_FILES['userfile']['name'];
