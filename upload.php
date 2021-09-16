@@ -1,8 +1,8 @@
 <?php
 // Connect to FTP server
-$ftp_server = "211.183.3.100";
-$ftpuser = "bsd";
-$ftppasswd = "bsd";       	
+$ftp_server = "10.100.0.40";
+$ftpuser = "tkdals";
+$ftppasswd = "tkdals";       	
 
 // Establish ftp connection
 $ftp_connection = ftp_connect($ftp_server, 21)

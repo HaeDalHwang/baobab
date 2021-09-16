@@ -1,8 +1,8 @@
 <?php
 // Mariadb Connect TEST
-$host = "211.183.3.100";
-$id = "root";
-$passwd = "test123";
+$host = "10.100.0.40";
+$id = "user1";
+$passwd = "user1";
 $dbname = "test";
 // DBconnection
 $db = new mysqli($host, $id, $passwd, $dbname);
