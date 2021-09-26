@@ -1,14 +1,13 @@
 <?php
 ob_start();
 // Mariadb Connect TEST
-$host = "10.100.0.40";
-$id = "user1";
-$passwd = "user1";
+$host = "211.183.3.100";
+$id = "nginx";
+$passwd = "test123";
 $dbname = "test";
 
 // 커넥션
 $db = new mysqli($host, $id, $passwd, $dbname);
-
 if($db){
 // 성공부분
 	// 로그인 SQL
