@@ -1,4 +1,6 @@
 <?php
+ob_start();
+header("Content-type: text/html; charset=utf-8");
 // Connect to FTP server
 $ftp_server = "211.183.3.100";
 $ftpuser = "user1";
@@ -25,7 +27,7 @@ if(ftp_put($ftp_connection,$serverfile,$localfile,FTP_BINARY)){
 }else{
 	echo '<script>';
     echo 'alert("Fail! FTP Error");';
-    echo "location.replace('index.php');";
+    echo "location.replace('list.php');";
     echo '</script>';}
 
 ?>
