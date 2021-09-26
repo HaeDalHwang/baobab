@@ -2,9 +2,9 @@
 ob_start();
 header("Content-type: text/html; charset=utf-8");
 // Connect to FTP server
-$ftp_server = "10.100.0.40";
-$ftpuser = "tkdals";
-$ftppasswd = "tkdals";       	
+$ftp_server = "211.183.3.100";
+$ftpuser = "user1";
+$ftppasswd = "user1";       	
 
 if(!$_GET['type']){
     echo "<script>alert('이상하게 접근하셨습니다;;');";
