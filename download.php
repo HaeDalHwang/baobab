@@ -2,7 +2,7 @@
 ob_start();
 header("Content-type: text/html; charset=utf-8");
 // Connect to FTP server
-$ftp_server = "211.183.3.100";
+$ftp_server = "192.168.0.100";
 $ftpuser = "user1";
 $ftppasswd = "user1";       	
 

@@ -1,7 +1,7 @@
 <?php
 ob_start();
 // Mariadb Connect TEST
-$host = "211.183.3.100";
+$host = "192.168.0.100";
 $id = "nginx";
 $passwd = "test123";
 $dbname = "test";
